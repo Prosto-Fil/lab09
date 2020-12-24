@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: prepare environment
         run:  sudo apt install git &&
-              git submodule update --init
+              git submodule update --init --recursive
 
       - name: checks
         run:
@@ -41,7 +41,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: prepare environment
         run:  sudo apt install git &&
-              git submodule update --init
+              git submodule update --init --recursive
 
       - name: tests
         run:
@@ -57,7 +57,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: prepare environment
         run:  sudo apt install git &&
-              git submodule update --init
+              git submodule update --init --recursive
 
       - name: quality
         run:
