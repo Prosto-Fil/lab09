@@ -45,8 +45,7 @@ add_library(libimage_parser
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/PageDownloader.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/Page.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/LinkData.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/ImageParserData.cpp
-)
+        )
 
 target_include_directories(libimage_parser
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
