@@ -8,7 +8,8 @@ Page::~Page() noexcept {
   gumbo_destroy_output(&kGumboDefaultOptions, output);
 }
 
-std::vector<std::string> Page::GetLinks(const std::string& attribute, int tag) {
+auto Page::GetLinks(const std::string& attribute, int tag)
+    -> std::vector<std::string> {
   std::vector<std::string> result;
   GetLinksImpl(output->root, result, attribute, tag);
   return result;
