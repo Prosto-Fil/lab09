@@ -13,9 +13,11 @@
 #include <condition_variable>
 #include <cstring>
 #include <fstream>
+#include <mutex>
 #include <queue>
 #include <string>
 #include <vector>
+#include <exception>
 
 class ImgParser {
 public:
@@ -33,6 +35,10 @@ private:
  std::ofstream out;
  std::string url;
  std::size_t depth;
+ std::condition_variable cond_var;
+ bool ready;
+ std::atomic_size_t parse_count;
+ std::mutex download_mutex;
 };
 
 #endif // INCLUDE_IMAGEPASRER_HPP_
